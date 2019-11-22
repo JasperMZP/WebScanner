@@ -56,7 +56,7 @@ class Reporter:
 
     def write_xml(self, filename):
         try:
-            root = cET.Element('WASec')
+            root = cET.Element('3W-Scanner')
             info = cET.SubElement(root, 'scan-info', time=datetime.now().time().isoformat(),
                                   date=datetime.now().date().isoformat())
             cET.SubElement(info, 'base-url').text = self.__info__['base_url']
@@ -125,7 +125,7 @@ class Reporter:
     def write_txt(self, filename):
         try:
             with open(str(filename) + '.txt', 'x') as file:
-                file.write('WASEC SCAN\n___________________\n')
+                file.write('3W-Scanner\n___________________\n')
                 file.write('Date: ' + datetime.now().date().isoformat())
                 file.write('\nTime: ' + datetime.now().time().isoformat())
                 file.write('\n___________________\n')

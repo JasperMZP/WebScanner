@@ -97,7 +97,7 @@ class Work_MainWindow1(QtWidgets.QMainWindow, Ui_MainWindow1):
     def are_you_sure(self):
         choice = QtWidgets.QMessageBox.question(self, "You left the Login URL box empty!",
                                                 "Are You sure you don't want to login to the website?\n"
-                                                "WASec may need to be authenticated to the website"
+                                                "3W-Scanner may need to be authenticated to the website"
                                                 " in order to scan them.",
                                                 QtWidgets.QMessageBox.No | QtWidgets.QMessageBox.Yes)
         if choice == QtWidgets.QMessageBox.Yes:
@@ -123,7 +123,7 @@ class Work_MainWindow1(QtWidgets.QMainWindow, Ui_MainWindow1):
     def closeEvent(self, event, *args, **kwargs):
         if not self.sender():
             choice = QtWidgets.QMessageBox.question(self, "Exiting",
-                                                    "Are You sure you want to exit WASec?",
+                                                    "Are You sure you want to exit 3W-Scanner?",
                                                     QtWidgets.QMessageBox.Cancel | QtWidgets.QMessageBox.Yes)
             if choice == QtWidgets.QMessageBox.Yes:
                 event.accept()

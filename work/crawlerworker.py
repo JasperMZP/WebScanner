@@ -69,7 +69,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
                 self.browser.open(url=url)
                 break
             except exceptions.ConnectionError as ce:
-                sleep(self.delay * retry)
+                #sleep(self.delay * retry)
                 if retry == 11:
                     return False
                 else:
@@ -259,7 +259,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
             parent = self._check_parent(handel.login_url)
             if self._logged_in:
                 self._instance.change_state.emit('Login Successful!')
-                sleep(2)
+                #sleep(2)
                 if parent:
                     self._add_crawled(handel.login_url, parent, parsed)
                 else:
@@ -292,6 +292,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
             if (not link_listed) and ('#' not in str(link_href)):
                 # add link to list of links to open
                 self._links_to_crawl.append([url, link_href])
+                print(url, link_href)
                 self.total += 1
 
         forms = page.find_all("form")
@@ -321,12 +322,11 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
         if self.running:
             self._instance.change_state.emit('Pausing between requests...')
             # get page content
-            # get page content
             parsed = self.browser.parsed
             if self.info['max_crawl'] != 1:
                 self._get_page_links(url, parsed)  # send content to retrieve links from
 
-                sleep(self.delay)
+                #sleep(self.delay)
             else:
                 self._add_crawled(url, url, parsed)
                 self._is_dynamic(url)
@@ -357,7 +357,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
             self.total_crawled += 1
         self.__parsed_crawled[url] = parsed_page
         self._instance.on_info.emit(self.crawled_links)
-        sleep(2)
+        #sleep(2)
 
     # main spider function; creates our spider's web
     def run(self):

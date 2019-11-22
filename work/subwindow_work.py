@@ -60,7 +60,7 @@ class Work_SubWindow2(QtWidgets.QMainWindow, Ui_MainWindow2):
             self.next.connect(self.sqli_tab)
             option = 'Full Testing (SQLi + XSS)'
 
-        self.setWindowTitle("WASec: " + option)
+        self.setWindowTitle("3W-Scanner: " + option)
         self.lbloption.setText(option)
         self.btnnew.clicked.connect(self.new_scan)
         self.btnExit.clicked.connect(self.exiting)
@@ -278,7 +278,7 @@ class Work_SubWindow2(QtWidgets.QMainWindow, Ui_MainWindow2):
         result = report.saver()
         msg = QMessageBox()
         msg.setWindowIcon(self.windowIcon())
-        msg.setWindowTitle("WASec | Save Report")
+        msg.setWindowTitle("3W-Scanner | Save Report")
         if not result:
             self.saved = True
             msg.setIcon(QMessageBox.Information)
@@ -295,7 +295,7 @@ class Work_SubWindow2(QtWidgets.QMainWindow, Ui_MainWindow2):
 
     def exiting(self):
         choice = QMessageBox.question(self, "Exiting",
-                                      "Are You sure you want to exit WASec?",
+                                      "Are You sure you want to exit 3W-Scanner?",
                                       QMessageBox.Cancel | QMessageBox.Ok)
         if choice == QMessageBox.Ok:
             self.close()
@@ -303,7 +303,7 @@ class Work_SubWindow2(QtWidgets.QMainWindow, Ui_MainWindow2):
     def closeEvent(self, event, *args, **kwargs):
         if not self.sender():
             choice = QMessageBox.question(self, "Exiting",
-                                          "Are You sure you want to exit WASec?",
+                                          "Are You sure you want to exit 3W-Scanner?",
                                           QMessageBox.Cancel | QMessageBox.Yes)
             if choice == QMessageBox.Yes:
                 event.accept()

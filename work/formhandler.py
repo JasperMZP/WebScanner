@@ -16,7 +16,8 @@
 
 from exceptions import FieldsError, InvalidFormError, FilledFieldError
 from robobrowser.forms.fields import Submit
-from  robobrowser.exceptions import InvalidNameError
+from robobrowser.exceptions import InvalidNameError
+
 
 class FormHandler:
     def __init__(self, browser):
@@ -47,8 +48,8 @@ class FormHandler:
 
                 elif field['type'] == 'text':
                     text += 1
-                    if field.has_attr('value'):
-                       filled += 1
+                    if field.has_attr('value') and field['value'] != "":
+                        filled += 1
                     else:
                         self.attack_fields.append(field['name'])
                 elif field['type'] == 'hidden':
@@ -56,7 +57,7 @@ class FormHandler:
                         self.other_fields['csrf-token'] = {'name': field['name'], 'value': field['value']}
                     else:
                         text += 1
-                        if field.has_attr('value'):
+                        if field.has_attr('value') and field['value'] != "":
                             filled += 1
                         else:
                             self.attack_fields.append(field['name'])
@@ -80,14 +81,14 @@ class FormHandler:
                         self.submit_buttons.append(submit)
             if not self.submit_buttons:
                 self.submit_buttons.append('NA')
-            if not self.attack_fields:
-                raise FieldsError(
-                    "Can't Find Fields Suitable for Attack i.e. not of type 'Text' or 'Hidden'")
+            # if not self.attack_fields:
+            #     raise FieldsError(
+            #         "Can't Find Fields Suitable for Attack i.e. not of type 'Text' or 'Hidden'")
             if not self.submit_buttons:
                 raise FieldsError("Can't Find Submit Button!")
 
-            #if filled == text:
-                #raise FilledFieldError
+            # if filled == text:
+            # raise FilledFieldError
             select_fields = parsed_form.find_all('select')
             for select in select_fields:
                 # select first value
@@ -131,5 +132,4 @@ class FormHandler:
             return False
             #   throw
             #   finally: #  finish
-                # check if there are any list boxes
-
+            # check if there are any list boxes
