@@ -46,7 +46,7 @@ class FormHandler:
                     else:
                         self.submit_buttons.append('NA')
 
-                elif field['type'] == 'text':
+                elif field['type'] == 'text' or field['type'] == 'password':
                     text += 1
                     if field.has_attr('value') and field['value'] != "":
                         filled += 1

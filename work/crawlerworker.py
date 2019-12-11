@@ -69,7 +69,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
                 self.browser.open(url=url)
                 break
             except exceptions.ConnectionError as ce:
-                #sleep(self.delay * retry)
+                # sleep(self.delay * retry)
                 if retry == 11:
                     return False
                 else:
@@ -182,7 +182,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
         else:
             res = True
         if res:
-            return self._is_response_ok(url) and self._is_html_page(url) and self._is_same_page(url)
+            return self._is_response_ok(url) and self._is_html_page(url) # and self._is_same_page(url)
         else:
             self.finish = True
             self.running = False
@@ -207,6 +207,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
                             # result = self._is_same_page(page_link)
                             # return result
                             self._instance.change_state.emit('URL is invalid!')
+                            print("is same query")
                             return False
         return True
 
@@ -259,7 +260,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
             parent = self._check_parent(handel.login_url)
             if self._logged_in:
                 self._instance.change_state.emit('Login Successful!')
-                #sleep(2)
+                # sleep(2)
                 if parent:
                     self._add_crawled(handel.login_url, parent, parsed)
                 else:
@@ -326,7 +327,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
             if self.info['max_crawl'] != 1:
                 self._get_page_links(url, parsed)  # send content to retrieve links from
 
-                #sleep(self.delay)
+                # sleep(self.delay)
             else:
                 self._add_crawled(url, url, parsed)
                 self._is_dynamic(url)
@@ -357,7 +358,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
             self.total_crawled += 1
         self.__parsed_crawled[url] = parsed_page
         self._instance.on_info.emit(self.crawled_links)
-        #sleep(2)
+        # sleep(2)
 
     # main spider function; creates our spider's web
     def run(self):
@@ -374,7 +375,9 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
             parent = self._links_to_crawl[self.i][0]
             link = self._links_to_crawl[self.i][1]
             url = parse.urljoin(self.base_url, link)  # join main url with page link
+            print(url)
             if self._is_url_good(url) and self._is_robot_allowed(link):  # is url valid and working
+                print("good")
                 self._instance.change_state.emit('URL is good!')
                 parsed_page = self._open_url(url)  # open page
                 self._add_crawled(url, parent, parsed_page)
@@ -382,6 +385,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
                 # add link to list of opened links
                 self._is_dynamic(url)
             else:
+                print("not good")
                 self._instance.change_state.emit('URL is not good!')
             # delete opened link from list of links to open
             self._links_to_crawl.pop(self.i)

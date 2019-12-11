@@ -124,25 +124,25 @@ class Reporter:
 
     def write_txt(self, filename):
         try:
-            with open(str(filename) + '.txt', 'x') as file:
+            with open(str(filename) + '.txt', 'x', encoding='utf-8') as file:
                 file.write('3W-Scanner\n___________________\n')
                 file.write('Date: ' + datetime.now().date().isoformat())
                 file.write('\nTime: ' + datetime.now().time().isoformat())
                 file.write('\n___________________\n')
                 file.write('Base URL: ' + str(self.__info__['base_url']))
-                file.write('\nRobots.txt: '+str(self.__info__['robo_url']))
-                file.write('\nMax-Crawl: '+str(self.__info__['max_crawl']))
-                file.write('\nLogin URL: '+str(self.__info__['login_url']))
-                file.write('\nScan Option: '+str(self.__info__['option']))
-                file.write('\nTime Taken: '+self.__info__['time'])
+                file.write('\nRobots.txt: ' + str(self.__info__['robo_url']))
+                file.write('\nMax-Crawl: ' + str(self.__info__['max_crawl']))
+                file.write('\nLogin URL: ' + str(self.__info__['login_url']))
+                file.write('\nScan Option: ' + str(self.__info__['option']))
+                file.write('\nTime Taken: ' + self.__info__['time'])
 
                 if 'crawl' in self.__items__:
                     file.write('\n________________________\n')
                     file.write(
-                        '- CRAWLED URLS ( found: '+str(self.__items__['crawl']['total'])
-                        + ' links, crawled: '+str(self.__items__['crawl']['total_crawled'])
-                        + ' links, invalid: '+str(self.__items__['crawl']['invalid'])
-                        + ' links, time taken: '+self.__info__['time']+')\n')
+                        '- CRAWLED URLS ( found: ' + str(self.__items__['crawl']['total'])
+                        + ' links, crawled: ' + str(self.__items__['crawl']['total_crawled'])
+                        + ' links, invalid: ' + str(self.__items__['crawl']['invalid'])
+                        + ' links, time taken: ' + self.__info__['time'] + ')\n')
 
                     header = self.__header__('crawl')
                     for index in self.__items__['crawl']['links']:
@@ -150,13 +150,15 @@ class Reporter:
                         file.write(header[1] + ': ' + str(self.__items__['crawl']['links'][index]['from']) + '\n')
                         file.write(header[2] + ':\n')
                         for url in self.__items__['crawl']['links'][index]['url'].keys():
-                            file.write('- Title: '+self.__items__['crawl']['links'][index]['url'][url]+'  ==>  '+str(url)+'\n')
+                            file.write(
+                                '- Title: ' + self.__items__['crawl']['links'][index]['url'][url] + '  ==>  ' + str(
+                                    url) + '\n')
                     file.write('\n')
 
                 if 'sql' in self.__items__:
                     file.write('\n________________________\n')
                     file.write('- SQL Injection Testing ( found ' + str(self.__items__['sql']['count'])
-                               + ' vulnerable pages, time taken: '+self.__items__['sql']['time']+' )\n')
+                               + ' vulnerable pages, time taken: ' + self.__items__['sql']['time'] + ' )\n')
                     header = self.__header__('sql')
                     for index in self.__items__['sql']['exploited']:
                         file.write(header[0] + ': ' + str(index + 1) + '\n')
@@ -167,7 +169,7 @@ class Reporter:
                     i = 1
                     for fault in self.__items__['sql']['faults']:
                         file.write('\n* Errors Occurred:\n')
-                        file.write(str(i)+')\n- Page: '+str(fault['url']))
+                        file.write(str(i) + ')\n- Page: ' + str(fault['url']))
                         file.write('\n- Error: ' + str(fault['fault']))
                         i += 1
                     file.write('\n')
@@ -175,7 +177,7 @@ class Reporter:
                 if 'xss' in self.__items__:
                     file.write('\n________________________\n')
                     file.write('- Cross-site Scripting Testing ( found ' + str(self.__items__['xss']['count'])
-                               + ' vulnerable pages, time taken: '+self.__items__['xss']['time']+' )\n')
+                               + ' vulnerable pages, time taken: ' + self.__items__['xss']['time'] + ' )\n')
                     header = self.__header__('xss')
                     for index in self.__items__['xss']['exploited']:
                         file.write(header[0] + ': ' + str(index + 1) + '\n')
@@ -186,7 +188,7 @@ class Reporter:
                     i = 1
                     for fault in self.__items__['xss']['faults']:
                         file.write('\n* Errors Occurred:\n')
-                        file.write(str(i)+')\n- Page: '+str(fault['url']))
+                        file.write(str(i) + ')\n- Page: ' + str(fault['url']))
                         file.write('\n- Error: ' + str(fault['fault']))
                         i += 1
                     file.write('\n')
