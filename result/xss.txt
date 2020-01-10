@@ -1,0 +1,169 @@
+3W-Scanner
+___________________
+Date: 2020-01-10
+Time: 17:00:45.533713
+___________________
+Base URL: http://192.168.6.1/xss/
+Robots.txt: 
+Max-Crawl: 0
+Login URL: None
+Scan Option: xss
+Time Taken: 1 secs
+________________________
+- CRAWLED URLS ( found: 32 links, crawled: 28 links, invalid: 3 links, time taken: 1 secs)
+ID: 1
+FROM: http://192.168.6.1/xss/
+URL:
+- Title: 欢迎来到level20  ==>  http://192.168.6.1/xss/level20.php?arg01=a&arg02=b
+- Title: 欢迎来到level19  ==>  http://192.168.6.1/xss/level19.php?arg01=a&arg02=b
+- Title: 欢迎来到level18  ==>  http://192.168.6.1/xss/level18.php?arg01=a&arg02=b
+- Title: 欢迎来到level17  ==>  http://192.168.6.1/xss/level17.php?arg01=a&arg02=b
+- Title: 欢迎来到level16  ==>  http://192.168.6.1/xss/level16.php?keyword=test!
+- Title: 欢迎来到level15  ==>  http://192.168.6.1/xss/level15.php?src=1.gif
+- Title: 欢迎来到level14  ==>  http://192.168.6.1/xss/level14.php
+- Title: 欢迎来到level13  ==>  http://192.168.6.1/xss/level13.php?keyword=good job!
+- Title: 欢迎来到level12  ==>  http://192.168.6.1/xss/level12.php?keyword=good job!
+- Title: 欢迎来到level11  ==>  http://192.168.6.1/xss/level11.php?keyword=good job!
+- Title: 欢迎来到level10  ==>  http://192.168.6.1/xss/level10.php?keyword=well done!
+- Title: 欢迎来到level9  ==>  http://192.168.6.1/xss/level9.php?keyword=not bad!
+- Title: 欢迎来到level8  ==>  http://192.168.6.1/xss/level8.php?keyword=nice try!
+- Title: 欢迎来到level7  ==>  http://192.168.6.1/xss/level7.php?keyword=move up!
+- Title: 欢迎来到level6  ==>  http://192.168.6.1/xss/level6.php?keyword=break it out!
+- Title: 欢迎来到level5  ==>  http://192.168.6.1/xss/level5.php?keyword=find a way out!
+- Title: 欢迎来到level4  ==>  http://192.168.6.1/xss/level4.php?keyword=try harder!
+- Title: 欢迎来到level3  ==>  http://192.168.6.1/xss/level3.php?keyword=test
+- Title: 欢迎来到level2  ==>  http://192.168.6.1/xss/level2.php?keyword=test
+- Title: 欢迎来到level1  ==>  http://192.168.6.1/xss/level1.php?name=test
+ID: 2
+FROM: http://192.168.6.1/xss/level2.php?keyword=test/
+URL:
+- Title: 欢迎来到level2  ==>  http://192.168.6.1/xss/level2.php
+ID: 3
+FROM: http://192.168.6.1/xss/level3.php?keyword=test/
+URL:
+- Title: 欢迎来到level3  ==>  http://192.168.6.1/xss/level3.php
+ID: 4
+FROM: http://192.168.6.1/xss/level4.php?keyword=try harder!/
+URL:
+- Title: 欢迎来到level4  ==>  http://192.168.6.1/xss/level4.php
+ID: 5
+FROM: http://192.168.6.1/xss/level5.php?keyword=find a way out!/
+URL:
+- Title: 欢迎来到level5  ==>  http://192.168.6.1/xss/level5.php
+ID: 6
+FROM: http://192.168.6.1/xss/level6.php?keyword=break it out!/
+URL:
+- Title: 欢迎来到level6  ==>  http://192.168.6.1/xss/level6.php
+ID: 7
+FROM: http://192.168.6.1/xss/level7.php?keyword=move up!/
+URL:
+- Title: 欢迎来到level7  ==>  http://192.168.6.1/xss/level7.php
+ID: 8
+FROM: http://192.168.6.1/xss/level8.php?keyword=nice try!/
+URL:
+- Title: 欢迎来到level8  ==>  http://192.168.6.1/xss/level8.php
+ID: 9
+FROM: http://192.168.6.1/xss/level9.php?keyword=not bad!/
+URL:
+- Title: 欢迎来到level9  ==>  http://192.168.6.1/xss/level9.php
+
+
+________________________
+- Cross-site Scripting Testing ( found 19 vulnerable pages, time taken: 1 secs )
+INDEX: 1
+URL: http://192.168.6.1/xss/level20.php?arg01=a&arg02=b
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 2
+URL: http://192.168.6.1/xss/level19.php?arg01=a&arg02=b
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 3
+URL: http://192.168.6.1/xss/level18.php?arg01=a&arg02=b
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 4
+URL: http://192.168.6.1/xss/level17.php?arg01=a&arg02=b
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 5
+URL: http://192.168.6.1/xss/level16.php?keyword=test!
+TYPE: reflected-get
+PAYLOAD: a=\"get\";
+
+INDEX: 6
+URL: http://192.168.6.1/xss/level15.php?src=1.gif
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 7
+URL: http://192.168.6.1/xss/level13.php?keyword=good job!
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 8
+URL: http://192.168.6.1/xss/level12.php?keyword=good job!
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 9
+URL: http://192.168.6.1/xss/level11.php?keyword=good job!
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 10
+URL: http://192.168.6.1/xss/level10.php?keyword=well done!
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 11
+URL: http://192.168.6.1/xss/level9.php?keyword=not bad!
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 12
+URL: http://192.168.6.1/xss/level8.php?keyword=nice try!
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 13
+URL: http://192.168.6.1/xss/level7.php?keyword=move up!
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 14
+URL: http://192.168.6.1/xss/level6.php?keyword=break it out!
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 15
+URL: http://192.168.6.1/xss/level5.php?keyword=find a way out!
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 16
+URL: http://192.168.6.1/xss/level4.php?keyword=try harder!
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 17
+URL: http://192.168.6.1/xss/level3.php?keyword=test
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 18
+URL: http://192.168.6.1/xss/level2.php?keyword=test
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+INDEX: 19
+URL: http://192.168.6.1/xss/level1.php?name=test
+TYPE: reflected-get
+PAYLOAD: <script>alert(123)</script>
+
+
+

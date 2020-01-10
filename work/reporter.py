@@ -116,6 +116,24 @@ class Reporter:
                     cET.SubElement(fault, 'error').text = str(f['fault'])
                     i += 1
 
+            if 'second' in self.__items__:
+                sql = cET.SubElement(root, 'SQLi-Results')
+                ssql = cET.SubElement(sql, 'Exploited-Links',
+                                      total=str(self.__items__['second']['count']),
+                                      took=self.__items__['second']['time'])
+                for index in self.__items__['second']['exploited']:
+                    sub = cET.SubElement(ssql, 'Link', index=str(index))
+                    cET.SubElement(sub, 'URL').text = self.__items__['second']['exploited'][index]['url']
+                    cET.SubElement(sub, 'Type').text = self.__items__['second']['exploited'][index]['type']
+                    cET.SubElement(sub, 'Payload').text = self.__items__['second']['exploited'][index]['payload']
+                faults = cET.SubElement(sql, 'Faults')
+                i = 1
+                for f in self.__items__['second']['faults']:
+                    fault = cET.SubElement(faults, 'fault', index=str(i))
+                    cET.SubElement(fault, 'url').text = str(f['url'])
+                    cET.SubElement(fault, 'error').text = str(f['fault'])
+                    i += 1
+
             tree = cET.ElementTree(root)
             tree.write(str(filename) + '.xml')
             return None
@@ -192,6 +210,26 @@ class Reporter:
                         file.write('\n- Error: ' + str(fault['fault']))
                         i += 1
                     file.write('\n')
+
+                if 'second' in self.__items__:
+                    file.write('\n________________________\n')
+                    file.write('-Second SQL Injection Testing ( found ' + str(self.__items__['second']['count'])
+                               + ' vulnerable pages, time taken: ' + self.__items__['second']['time'] + ' )\n')
+                    header = self.__header__('second')
+                    for index in self.__items__['second']['exploited']:
+                        file.write(header[0] + ': ' + str(index + 1) + '\n')
+                        file.write(header[1] + ': ' + str(self.__items__['second']['exploited'][index]['url']) + '\n')
+                        file.write(header[2] + ': ' + str(self.__items__['second']['exploited'][index]['type']) + '\n')
+                        file.write(header[3] + ': ' + str(self.__items__['second']['exploited'][index]['payload']) + '\n')
+                    file.write('\n')
+                    i = 1
+                    for fault in self.__items__['second']['faults']:
+                        file.write('\n* Errors Occurred:\n')
+                        file.write(str(i) + ')\n- Page: ' + str(fault['url']))
+                        file.write('\n- Error: ' + str(fault['fault']))
+                        i += 1
+                    file.write('\n')
+
                 file.close()
                 return None
         except Exception as e:

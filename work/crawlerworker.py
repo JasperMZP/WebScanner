@@ -182,7 +182,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
         else:
             res = True
         if res:
-            return self._is_response_ok(url) and self._is_html_page(url) # and self._is_same_page(url)
+            return self._is_response_ok(url) and self._is_html_page(url) and self._is_same_page(url)
         else:
             self.finish = True
             self.running = False
@@ -293,6 +293,7 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
             if (not link_listed) and ('#' not in str(link_href)):
                 # add link to list of links to open
                 self._links_to_crawl.append([url, link_href])
+                print("_get_page_links")
                 print(url, link_href)
                 self.total += 1
 
@@ -374,7 +375,15 @@ class CrawlerWorker(QObject):  # spider that will get links of website # called 
             # start from the last link in the list
             parent = self._links_to_crawl[self.i][0]
             link = self._links_to_crawl[self.i][1]
-            url = parse.urljoin(self.base_url, link)  # join main url with page link
+            print("----")
+            print(parent, link)
+            if parent[len(parent) - 1] != '/':
+                parent = parent + '/'
+            # url = parse.urljoin(self.base_url, link)  # join main url with page link
+            url = parse.urljoin(parent, link)  # join main url with page link
+            self._opener(url)
+            if 200 != self.browser.response.status_code:
+                url = parse.urljoin(self.base_url, link)  # join main url with page link
             print(url)
             if self._is_url_good(url) and self._is_robot_allowed(link):  # is url valid and working
                 print("good")

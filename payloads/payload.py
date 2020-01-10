@@ -238,5 +238,5 @@ def r_string(n):
     """ random strings """
     return "".join([choice(uppercase + lowercase) for _ in range(0, int(n))])
 
-for e in bsql():
+for e in pxss():
     print(e)

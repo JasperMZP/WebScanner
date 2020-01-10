@@ -24,6 +24,7 @@ from subwindow import Ui_MainWindow2
 import time
 from datetime import datetime, timedelta
 from xssexploiter import XSSExploiter
+from secondexploiter import SecondExploiter
 
 
 class Work_SubWindow2(QtWidgets.QMainWindow, Ui_MainWindow2):
@@ -42,23 +43,32 @@ class Work_SubWindow2(QtWidgets.QMainWindow, Ui_MainWindow2):
             self.next.connect(self.sqli_tab)
 
         elif info['option'] == 'sql':
+            print("info['option'] == 'sql'")
             self.next.connect(self.sqli_tab)
             self.tabxss.setHidden(True)
+            self.tabsqli2.setHidden(True)
             option = 'Testing for SQL Injection (SQLi)'
 
         elif info['option'] == 'xss':
             self.next.connect(self.xss_tab)
             self.tabsqli.setHidden(True)
+            self.tabsqli2.setHidden(True)
             option = 'Testing for Cross-site Scripting (XSS)'
 
         elif info['option'] == 'crawl':
             self.next.connect(self.report_tab)
             self.tabxss.setHidden(True)
             self.tabsqli.setHidden(True)
+            self.tabsqli2.setHidden(True)
             option = 'Crawl Only'
+        elif info['option'] == 'second':
+            self.next.connect(self.sqli2_tab)
+            self.tabxss.setHidden(True)
+            self.tabsqli.setHidden(True)
+            option = 'Testing for Second-order'
         else:
             self.next.connect(self.sqli_tab)
-            option = 'Full Testing (SQLi + XSS)'
+            option = 'Full Testing (SQLi + XSS + Second-order)'
 
         self.setWindowTitle("3W-Scanner: " + option)
         self.lbloption.setText(option)
@@ -156,11 +166,29 @@ class Work_SubWindow2(QtWidgets.QMainWindow, Ui_MainWindow2):
     def after_xss(self, results):
         self.result['xss'] = results
         if results['running']:
-            time.sleep(3)
-            self.report_tab()
+            if self.info['option'] == 'full':
+                self.sqli2_tab()
+            else:
+                self.report_tab()
         else:
             self.lblsqltot.setText('Canceling...')
             time.sleep(3)
+            self.report_tab()
+
+    def sqli2_tab(self):
+        self.tabWidget.setCurrentIndex(self.tabWidget.indexOf(self.tabsqli2))
+        self.lblsqltot2.setText('Found 0 vulnerable pages')
+        self.pbsqltotal2.setMaximum(self.result['crawl']['total_crawled'])
+        self.second_exploiter = SecondExploiter(self.result['crawl'], self.info, self)
+        threading.Thread(target=self.second_exploiter.run, daemon=True).start()
+
+    def after_sqli2(self, results):
+        self.result['second'] = results
+        if results['running']:
+            time.sleep(3)
+            self.report_tab()
+        else:
+            self.lblsqltot2.setText('Canceling...')
             self.report_tab()
 
     def report_tab(self):
@@ -176,6 +204,13 @@ class Work_SubWindow2(QtWidgets.QMainWindow, Ui_MainWindow2):
             self.gbsqli.setHidden(True)
 
         elif self.info['option'] == 'sql':
+            self.gbxss.setHidden(True)
+            # self.gbsqli.setFixedHeight(self.gbsqli.height() + 135)
+            # self.listsqli.setFixedHeight(self.listsqli.height() + 135)
+            # self.lbldisq.setGeometry(QtCore.QRect(0, 120, 41, 21 + 265))
+            # self.lbltq.setGeometry(QtCore.QRect(40, 120, 191, 21 + 265))
+
+        elif self.info['option'] == 'second':
             self.gbxss.setHidden(True)
             self.gbsqli.setFixedHeight(self.gbsqli.height() + 135)
             self.listsqli.setFixedHeight(self.listsqli.height() + 135)
@@ -196,25 +231,33 @@ class Work_SubWindow2(QtWidgets.QMainWindow, Ui_MainWindow2):
         if (self.info['option'] == 'sql') and (self.info['option'] in self.result):
 
             for index in self.result['sql']['exploited']:
-                self.listsqli.addItem(str(index+1) + "- " + self.result['sql']['exploited'][index]['url'])
+                self.listsqli.addItem(str(index + 1) + "- " + self.result['sql']['exploited'][index]['url'])
             self.lbltq.setText(str(self.result['sql']['count']))
             percent = round((self.result['sql']['count'] / self.result['crawl']['total_crawled']) * 100, 2)
             self.lblwvp.setText(str(percent) + '%')
 
         elif (self.info['option'] == 'xss') and (self.info['option'] in self.result):
             for index in self.result['xss']['exploited']:
-                self.listxss.addItem(str(index+1) + "- " + self.result['xss']['exploited'][index]['url'])
+                self.listxss.addItem(str(index + 1) + "- " + self.result['xss']['exploited'][index]['url'])
             self.lbltx.setText(str(self.result['xss']['count']))
             percent = round((self.result['xss']['count'] / self.result['crawl']['total_crawled']) * 100, 2)
             self.lblwvp.setText(str(percent) + '%')
 
+        elif (self.info['option'] == 'second') and (self.info['option'] in self.result):
+
+            for index in self.result['second']['exploited']:
+                self.listsqli.addItem(str(index + 1) + "- " + self.result['second']['exploited'][index]['url'])
+            self.lbltq.setText(str(self.result['second']['count']))
+            percent = round((self.result['second']['count'] / self.result['crawl']['total_crawled']) * 100, 2)
+            self.lblwvp.setText(str(percent) + '%')
+
         elif self.info['option'] == 'full':
             for index in self.result['xss']['exploited']:
-                self.listxss.addItem(str(index+1) + "- " + self.result['xss']['exploited'][index]['url'])
+                self.listxss.addItem(str(index + 1) + "- " + self.result['xss']['exploited'][index]['url'])
             self.lbltx.setText(str(self.result['xss']['count']))
 
             for index in self.result['sql']['exploited']:
-                self.listsqli.addItem(str(index+1) + "- " + self.result['sql']['exploited'][index]['url'])
+                self.listsqli.addItem(str(index + 1) + "- " + self.result['sql']['exploited'][index]['url'])
             self.lbltq.setText(str(self.result['sql']['count']))
 
             count = 0
@@ -222,8 +265,9 @@ class Work_SubWindow2(QtWidgets.QMainWindow, Ui_MainWindow2):
                 for i in self.result['sql']['exploited']:
                     if self.result['sql']['exploited'][i]['url'] == self.result['xss']['exploited'][index]['url']:
                         count += 1
-            percent = round((((self.result['sql']['count'] + self.result['xss']['count']) - count) / self.result['crawl'][
-                'total_crawled']) * 100, 2)
+            percent = round(
+                (((self.result['sql']['count'] + self.result['xss']['count']) - count) / self.result['crawl'][
+                    'total_crawled']) * 100, 2)
             self.lblwvp.setText(str(percent) + '%')
 
         elif (self.info['option'] == 'crawl') and (self.info['option'] in self.result):
@@ -246,18 +290,18 @@ class Work_SubWindow2(QtWidgets.QMainWindow, Ui_MainWindow2):
         if seconds >= 3600:
             hours = round(seconds / 3600)
             minutes = (round((seconds / 3600) / 60))
-            elapsed = str(hours)+':'+str(minutes)+' hrs'
+            elapsed = str(hours) + ':' + str(minutes) + ' hrs'
         elif seconds >= 60:
             minutes = round(seconds / 60)
             seconds = round(seconds % 60)
-            elapsed = str(str(minutes)+'.'+str(seconds)+' mins')
+            elapsed = str(str(minutes) + '.' + str(seconds) + ' mins')
         elif seconds < 0:
             hours = round(seconds / 3600)
             minutes = (round((seconds / 3600) / 60))
-            hours = 24+hours
+            hours = 24 + hours
             elapsed = str(hours) + ':' + str(minutes) + ' hrs'
         else:
-            elapsed = str(seconds)+' secs'
+            elapsed = str(seconds) + ' secs'
         self.info['time'] = elapsed
         self.lbltotaltime.setText(elapsed)
 

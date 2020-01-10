@@ -1,0 +1,122 @@
+3W-Scanner
+___________________
+Date: 2020-01-10
+Time: 16:59:39.620751
+___________________
+Base URL: http://192.168.6.1/sqli-labs-master/
+Robots.txt: 
+Max-Crawl: 0
+Login URL: None
+Scan Option: second
+Time Taken: 34 secs
+________________________
+- CRAWLED URLS ( found: 89 links, crawled: 76 links, invalid: 11 links, time taken: 34 secs)
+ID: 1
+FROM: http://192.168.6.1/sqli-labs-master/
+URL:
+- Title: Less-19 Header Injection- Referer- Error Based- string  ==>  http://192.168.6.1/sqli-labs-master/Less-19
+- Title: Less-20 Cookie Injection- Error Based- string  ==>  http://192.168.6.1/sqli-labs-master/Less-20
+- Title: Less-17 Update Query- Error based - String  ==>  http://192.168.6.1/sqli-labs-master/Less-17
+- Title: Less-18 Header Injection- Error Based- string  ==>  http://192.168.6.1/sqli-labs-master/Less-18
+- Title: Less-15- Blind- Boolian Based- String  ==>  http://192.168.6.1/sqli-labs-master/Less-15
+- Title: Less-16- Blind- Time Based- Double quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-16
+- Title: Less-13- Double Injection- String- with twist  ==>  http://192.168.6.1/sqli-labs-master/Less-13
+- Title: Less-14- Double Injection- Double quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-14
+- Title: Less-11- Error Based- String  ==>  http://192.168.6.1/sqli-labs-master/Less-11
+- Title: Less-12- Error Based- Double quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-12
+- Title: Less-9 Blind- Time based- Single Quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-9?id=1
+- Title: Less-10 Blind- Time based- Double Quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-10?id=1
+- Title: Less-7 Dump into Outfile  ==>  http://192.168.6.1/sqli-labs-master/Less-7?id=1
+- Title: Less-8 Blind- Boolian- Single Quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-8?id=1
+- Title: Less-5 Double Query- Single Quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-5?id=1
+- Title: Less-6 Double Query- Double Quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-6?id=1
+- Title: Less-3 Error Based- String (with Twist)   ==>  http://192.168.6.1/sqli-labs-master/Less-3?id=1
+- Title: Less-1 **Error Based- String**  ==>  http://192.168.6.1/sqli-labs-master/Less-1?id=1
+- Title: Less-4 Error Based- DoubleQuotes String  ==>  http://192.168.6.1/sqli-labs-master/Less-4?id=1
+- Title: Less-2 **Error Based- Intiger**  ==>  http://192.168.6.1/sqli-labs-master/Less-2?id=1
+- Title: SQL Injections-Page-4  ==>  http://192.168.6.1/sqli-labs-master/index-3.html
+- Title: SQL Injections-Page-3  ==>  http://192.168.6.1/sqli-labs-master/index-2.html
+- Title: SQL Injections-Page-2  ==>  http://192.168.6.1/sqli-labs-master/index-1.html
+ID: 2
+FROM: http://192.168.6.1/sqli-labs-master/index-1.html/
+URL:
+- Title: Less-37- MySQL_real_escape_string  ==>  http://192.168.6.1/sqli-labs-master/Less-37
+- Title: Less-35 **why care for addslashes()**  ==>  http://192.168.6.1/sqli-labs-master/Less-35?id=1
+- Title: Less-36 **Bypass MySQL Real Escape String**  ==>  http://192.168.6.1/sqli-labs-master/Less-36?id=1
+- Title: Less-32 **Bypass addslashes()**  ==>  http://192.168.6.1/sqli-labs-master/Less-33?id=1
+- Title: Less-34- Bypass Add SLASHES  ==>  http://192.168.6.1/sqli-labs-master/Less-34
+- Title: Less-31 FUN with WAF  ==>  http://192.168.6.1/sqli-labs-master/Less-31?id=1
+- Title: Less-32 **Bypass addslashes()**  ==>  http://192.168.6.1/sqli-labs-master/Less-32?id=1
+- Title: Less-29 Protection with WAF  ==>  http://192.168.6.1/sqli-labs-master/Less-29?id=1
+- Title: Less-30  ==>  http://192.168.6.1/sqli-labs-master/Less-30?id=1
+- Title: Less-28 Trick with SELECT & UNION  ==>  http://192.168.6.1/sqli-labs-master/Less-28?id=1
+- Title: Less-28a Trick with SELECT & UNION  ==>  http://192.168.6.1/sqli-labs-master/Less-28a?id=1
+- Title: Less-27 Trick with SELECT & UNION  ==>  http://192.168.6.1/sqli-labs-master/Less-27?id=1
+- Title: Less-27 Trick with SELECT & UNION  ==>  http://192.168.6.1/sqli-labs-master/Less-27a?id=1
+- Title: Less-26 Trick with comments  ==>  http://192.168.6.1/sqli-labs-master/Less-26?id=1
+- Title: Less-26a Trick with comments  ==>  http://192.168.6.1/sqli-labs-master/Less-26a?id=1
+- Title: Less-25 Trick with OR & AND  ==>  http://192.168.6.1/sqli-labs-master/Less-25?id=1
+- Title: Less-25a Trick with OR & AND Blind  ==>  http://192.168.6.1/sqli-labs-master/Less-25a?id=1
+- Title: Less-23 **Error Based- no comments**  ==>  http://192.168.6.1/sqli-labs-master/Less-23?id=1
+- Title: Less-21 Cookie Injection- Error Based- complex - string  ==>  http://192.168.6.1/sqli-labs-master/Less-21
+- Title: Less-24 - Second Degree Injections   ==>  http://192.168.6.1/sqli-labs-master/Less-24
+- Title: Less-22 Cookie Injection- Error Based- Double Quotes - string  ==>  http://192.168.6.1/sqli-labs-master/Less-22
+ID: 3
+FROM: http://192.168.6.1/sqli-labs-master/index-2.html/
+URL:
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-53?sort=1
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-52?sort=1
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-50?sort=1
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-51?sort=1
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-48?sort=1
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-49?sort=1
+- Title: ORDER BY-Error-Numeric  ==>  http://192.168.6.1/sqli-labs-master/Less-46?sort=1
+- Title: ORDER BY Clause-Error-Single quote  ==>  http://192.168.6.1/sqli-labs-master/Less-47?sort=1
+- Title: Less-44 - Stacked Query blind   ==>  http://192.168.6.1/sqli-labs-master/Less-44
+- Title: Less-45 - Stacked Query Blind based twist  ==>  http://192.168.6.1/sqli-labs-master/Less-45
+- Title: Less-42 - Stacked Query error based   ==>  http://192.168.6.1/sqli-labs-master/Less-42
+- Title: Less-42 - Stacked Query   ==>  http://192.168.6.1/sqli-labs-master/Less-43
+- Title: Less-40 **stacked Query String type Blind**  ==>  http://192.168.6.1/sqli-labs-master/Less-40?id=1
+- Title: Less-38 **stacked Query**  ==>  http://192.168.6.1/sqli-labs-master/Less-38?id=1
+- Title: Less-41 **stacked Query Intiger type blind**  ==>  http://192.168.6.1/sqli-labs-master/Less-41?id=1
+- Title: Less-39 **stacked Query Intiger type**  ==>  http://192.168.6.1/sqli-labs-master/Less-39?id=1
+ID: 4
+FROM: http://192.168.6.1/sqli-labs-master/index-3.html/
+URL:
+- Title: Less-64:Challenge-11  ==>  http://192.168.6.1/sqli-labs-master/Less-64?id=1
+- Title: Less-65:Challenge-12  ==>  http://192.168.6.1/sqli-labs-master/Less-65?id=1
+- Title: Less-62:Challenge-9  ==>  http://192.168.6.1/sqli-labs-master/Less-62?id=1
+- Title: Less-63:Challenge-10  ==>  http://192.168.6.1/sqli-labs-master/Less-63?id=1
+- Title: Less-60:Challenge-7  ==>  http://192.168.6.1/sqli-labs-master/Less-60?id=1
+- Title: Less-61:Challenge-8  ==>  http://192.168.6.1/sqli-labs-master/Less-61?id=1
+- Title: Less-58:Challenge-5  ==>  http://192.168.6.1/sqli-labs-master/Less-58?id=1
+- Title: Less-59:Challenge-6  ==>  http://192.168.6.1/sqli-labs-master/Less-59?id=1
+- Title: Less-56:Challenge-3  ==>  http://192.168.6.1/sqli-labs-master/Less-56?id=1
+- Title: Less-54:Challenge-1  ==>  http://192.168.6.1/sqli-labs-master/Less-54?id=1
+- Title: Less-57:Challenge-4  ==>  http://192.168.6.1/sqli-labs-master/Less-57?id=1
+- Title: Less-55:Challenge-2  ==>  http://192.168.6.1/sqli-labs-master/Less-55?id=1
+ID: 5
+FROM: http://192.168.6.1/sqli-labs-master/Less-44/
+URL:
+- Title: 
+Account Create
+  ==>  http://192.168.6.1/sqli-labs-master/Less-44/acc-create.php
+ID: 6
+FROM: http://192.168.6.1/sqli-labs-master/Less-24/
+URL:
+- Title: NO-TITLE  ==>  http://192.168.6.1/sqli-labs-master/Less-24/login.php
+- Title: New User   ==>  http://192.168.6.1/sqli-labs-master/Less-24/new_user.php
+- Title: 
+Forgot Password
+  ==>  http://192.168.6.1/sqli-labs-master/Less-24/forgot_password.php
+
+
+________________________
+-Second SQL Injection Testing ( found 1 vulnerable pages, time taken: 28 secs )
+INDEX: 1
+URL: http://192.168.6.1/sqli-labs-master/Less-24/new_user.php ==> http://192.168.6.1/sqli-labs-master/Less-24
+TYPE: second-order-error-based-post
+PAYLOAD: '
+
+
+

